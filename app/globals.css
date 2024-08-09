@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -24,6 +24,39 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Internet Explorer, Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+@font-face {
+  font-family: 'TheSignature';
+  src: url('/fonts/Thesignature.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.image-container img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.image-container img:hover {
+  filter: grayscale(0%);
 }
 
 @layer utilities {
