@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-80 py-6 bg-transparent absolute w-full z-10">
+    <nav className="flex items-center justify-between px-4 md:px-8 lg:px-20 xl:px-80 py-6 bg-transparent absolute w-full z-10">
       <div className="flex items-center">
         <Image
           src="/images/zamrood.png"
@@ -63,6 +63,8 @@ const Navbar = () => {
           Need Assistance?
         </button>
       </div>
+
+      {/* Mobile Navbar Button */}
       <div className="md:hidden flex items-center">
         <button onClick={() => setIsOpen(!isOpen)} className="text-cream">
           <div className="space-y-2">
@@ -74,25 +76,6 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navbar */}
-      <div className="md:hidden flex items-center justify-between w-full px-4 py-2 bg-white shadow-md fixed top-0 left-0 z-20">
-        <div className="flex items-center">
-          <Image
-            src="/images/zamrood-color.png"
-            alt="Zamrood Logo"
-            width={100}
-            height={38}
-          />
-        </div>
-        <button onClick={() => setIsOpen(!isOpen)} className="text-teal">
-          <div className="space-y-2">
-            <div className="w-6 h-0.5 bg-teal"></div>
-            <div className="w-6 h-0.5 bg-teal"></div>
-            <div className="w-6 h-0.5 bg-teal"></div>
-          </div>
-        </button>
-      </div>
-
-      {/* Open/Hide Hamburger */}
       {isOpen && (
         <div className="fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg z-30 transition-transform transform translate-x-0">
           <div className="flex justify-end items-center p-4 border-b">
