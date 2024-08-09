@@ -1,6 +1,15 @@
-import Homepage from "./components/Homepage";
+import { Metadata } from 'next';
+import Homepage from './components/Homepage';
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'Zamrood by Asher Azriel Ginting',
+  description: 'Frontend test',
+  icons: {
+    icon: '/favicon.png',
+  },
+};
+
+export default function HomePage() {
   return (
     <div>
       <Homepage />
